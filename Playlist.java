@@ -7,7 +7,7 @@ public class Playlist {
         int pilihan;
         do{
             Scanner input = new Scanner(System.in);
-            System.out.println("Menu Playlist Lagu");
+            System.out.println("Menu Playlist");
             System.out.println("==================");
             System.out.println("1. Tampilkan Data Playlist");
             System.out.println("2. Tambah Data Playlist");
@@ -21,7 +21,7 @@ public class Playlist {
         
         switch (pilihan){
             case 1:
-                System.out.println("Playlist Lagu: ");
+                System.out.println("Playlist: ");
                 int nomor = 1;
                 for (String data:Playlist){
                 System.out.println(nomor+"."+data);
@@ -35,14 +35,14 @@ public class Playlist {
                 break;
             
             case 3: case 5:
-                System.out.println("Playlist Lagu: ");
+                System.out.println("Playlist : ");
                 int nomor1 = 1;
                 for (String data:Playlist){
                     System.out.println(nomor1+"."+data);
                     nomor1 = nomor1+1;
                 }
                 Scanner input3 = new Scanner(System.in);
-                System.out.print("Pilih Lagu Yang Akan Dihapus: ");
+                System.out.print("Pilih Playlist Yang Akan Dihapus: ");
                 int pilihan3 = input3.nextInt();
                 Playlist.remove(pilihan3-1);
                 break;
@@ -51,7 +51,7 @@ public class Playlist {
                 System.out.print("Tambahkan Playlist Lagu: ");
                 String pilihan4 = input4.nextLine();
                 Scanner input5 = new Scanner(System.in);
-                System.out.print("Tentukan Urutan Lagu: ");
+                System.out.print("Tentukan Urutan Playlist: ");
                 int pilihan5 = input5.nextInt();
                 Playlist.add(pilihan5-1, pilihan4);
                 break;
