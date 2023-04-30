@@ -98,7 +98,7 @@ public class TugasQueue {
                 }
                 else if (pilihAntrian4 == 2){
                     System.out.println("Seluruh Antrian 2 Telah Terhapus");
-                    daftar1.clear();
+                    daftar2.clear();
                 }
                 break;
             case 5:
