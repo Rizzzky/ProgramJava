@@ -23,27 +23,22 @@ public class TugasQueue {
             
         switch(pilihan){
             case 1:
-            if(daftar1.size() >= 10){
-                System.out.println("Antrian Penuh");
-                }
-                else{
                     Scanner pilih2 = new Scanner(System.in);
                     System.out.println("Tambah Data Antrian");
                     System.out.print("Pilih Antrian 1/2: ");
-                    if(pilih2.nextInt() == 1){
+                    int pilihAntrian = pilih2.nextInt();
+                    if(pilihAntrian == 1){
                         Scanner pilih3 = new Scanner(System.in);
                         System.out.print("Masukan Nama Antrian 1: ");
                         String antrian1 = pilih3.nextLine();
                         daftar1.addLast(antrian1);
                     }
-                    else if (pilih2.nextInt()==2){
+                    else if (pilihAntrian ==2){
                         Scanner pilih4 = new Scanner(System.in);
                         System.out.print("Masukan Nama Antrian 2: ");
                         String antrian2 = pilih4.nextLine();
                         daftar2.addLast(antrian2);
-                    }
-                }
-                
+                    }                
                 break;
             case 2:
                 Scanner pilih5 = new Scanner(System.in);
