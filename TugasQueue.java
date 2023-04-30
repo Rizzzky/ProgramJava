@@ -20,33 +20,41 @@ public class TugasQueue {
             System.out.println("6. Keluar");
             System.out.print("Pilihan Anda: ");
             pilihan = pilih.nextInt();
-
+            
         switch(pilihan){
             case 1:
-                Scanner pilih2 = new Scanner(System.in);
-                System.out.println("Tambah Data Antrian");
-                System.out.print("Pilih Antrian 1/2: ");
-                if(pilih2.nextInt() == 1){
-                    Scanner pilih3 = new Scanner(System.in);
-                    System.out.print("Masukan Nama Antrian 1: ");
-                    String antrian1 = pilih3.nextLine();
-                    daftar1.addLast(antrian1);
+            if(daftar1.size() >= 10){
+                System.out.println("Antrian Penuh");
                 }
-                else if (pilih2.nextInt()==2){
-                    Scanner pilih4 = new Scanner(System.in);
-                    System.out.print("Masukan Nama Antrian 2: ");
-                    String antrian2 = pilih4.nextLine();
-                    daftar2.addLast(antrian2);
+                else{
+                    Scanner pilih2 = new Scanner(System.in);
+                    System.out.println("Tambah Data Antrian");
+                    System.out.print("Pilih Antrian 1/2: ");
+                    if(pilih2.nextInt() == 1){
+                        Scanner pilih3 = new Scanner(System.in);
+                        System.out.print("Masukan Nama Antrian 1: ");
+                        String antrian1 = pilih3.nextLine();
+                        daftar1.addLast(antrian1);
+                    }
+                    else if (pilih2.nextInt()==2){
+                        Scanner pilih4 = new Scanner(System.in);
+                        System.out.print("Masukan Nama Antrian 2: ");
+                        String antrian2 = pilih4.nextLine();
+                        daftar2.addLast(antrian2);
+                    }
                 }
+                
                 break;
             case 2:
                 Scanner pilih5 = new Scanner(System.in);
                 System.out.println("Menghapus Antrian Pertama");
                 System.out.print("Pilih Antrian 1/2: ");
                 if(pilih5.nextInt() == 1){
+                    System.out.println("Antrian 1 Elemen Pertama Telah Dihapus");
                     daftar1.removeFirst();
                 }
                 else if (pilih5.nextInt()==2){
+                    System.out.println("Antrian 2 Elemen Pertama Telah Dihapus");
                     daftar2.removeFirst();
                 }
                 break;
@@ -72,12 +80,12 @@ public class TugasQueue {
                 System.out.println("Menghapus Semua Elemen");
                 System.out.print("Pilih Antrian 1/2: ");
                 if(pilih8.nextInt() == 1){
-                    System.out.println("Elmen Antrian 1 Telah Terhapus");
+                    System.out.println("Seluruh Antrian 1 Telah Terhapus");
                     daftar1.clear();
                     
                 }
                 else if (pilih8.nextInt() == 2){
-                    System.out.println("Elmen Antrian 2 Telah Terhapus");
+                    System.out.println("Seluruh Antrian 2 Telah Terhapus");
                     daftar1.clear();
                 }
                 break;
@@ -94,7 +102,7 @@ public class TugasQueue {
                     }
                 }
                 else if (pilih9.nextInt() == 2){
-                    System.out.println("Menampilkan Data Antrial 2");
+                    System.out.println("Menampilkan Data Antrian 2");
                     int nomor = 1;
                     for(String data : daftar2){
                         System.out.println(nomor+"."+data);
