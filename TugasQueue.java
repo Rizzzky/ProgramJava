@@ -121,7 +121,8 @@ public class TugasQueue {
                         System.out.println(nomor+"."+data);
                         nomor = nomor + 1;
                     }
-                }break;
+                }
+                break;
                 
             }
         }while(pilihan!=6);
