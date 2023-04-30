@@ -48,7 +48,7 @@ public class Playlist {
                 break;
             case 4:
                 Scanner input4 = new Scanner(System.in);
-                System.out.print("Tambahkan Playlist Lagu: ");
+                System.out.print("Tambahkan Playlist : ");
                 String pilihan4 = input4.nextLine();
                 Scanner input5 = new Scanner(System.in);
                 System.out.print("Tentukan Urutan Playlist: ");
